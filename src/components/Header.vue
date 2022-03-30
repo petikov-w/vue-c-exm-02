@@ -27,9 +27,9 @@ export default {
 </script>
 
 <style scoped>
-body {
-  margin: 0;
-}
+/*body {*/
+/*  margin: 0;*/
+/*}*/
 .wrapper {
   /*width: 1440px;*/
   width: 100%;
@@ -65,4 +65,48 @@ body {
   align-items: center;
   margin-left: 175px;
 }
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .header {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .header {
+    width: 60vw;
+    margin: 0 auto;
+  }
+  .m-area {
+    margin-left: 5vw;
+  }
+}
+
+@media (max-width: 500px) {
+    .header {
+      display: flex;
+      flex-direction: column;
+      height: 28vh;
+      width: 100vw;
+      margin: 0 auto;
+    }
+    .t-area {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 15px;
+    }
+    .telefon {
+      margin-top: 15px;
+    }
+
+  .m-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+}
+
 </style>
