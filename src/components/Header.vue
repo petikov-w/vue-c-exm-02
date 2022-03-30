@@ -3,8 +3,9 @@
     <div class="header">
       <div class="t-area">
         <img width="20" height="20" src="../assets/i-telefon.png" alt="ico-telefon">
-        <div class="telefon">{{ telefon_1 }}</div>
-        <div class="telefon">{{ telefon_2 }}</div>
+<!--        <div class="telefon">{{ telefon_1 }}</div>-->
+        <div class="telefon">{{ PhoneNumberFormat(telefon_1) }}</div>
+        <div class="telefon">{{ PhoneNumberFormat(telefon_2) }}</div>
       </div>
       <div class="m-area">
         <img width="15" height="25" src="../assets/i-mesto.png" alt="ico-area">
@@ -17,21 +18,30 @@
 <script>
 export default {
   name: "Header",
-  data: function (){
+  data: function () {
     return {
-    telefon_1: "+7 909 428 2463",
-    telefon_2: "+7 905 920 2069",
-    city: "Ростов-на-Дону"
-  }}
+      telefon_1: "+79094282463",
+      telefon_2: "+79059202069",
+      city: "Ростов-на-Дону"
+    }
+  },
+  methods: {
+    PhoneNumberFormat(number) {
+      let temp_number, pref;
+      temp_number = `${number}`;
+      if (temp_number[0] == '8') { pref = temp_number.substr(0,1)}
+      if (temp_number[0] == '+') { pref = temp_number.substr(0,2);}
+      temp_number = temp_number.substr(-10);
+      return `${pref}  (${temp_number.substr(0,3)}) ${temp_number.substr(3,3)}
+              ${temp_number.substr(6,2)} ${temp_number.substr(8,2)}`;
+    }
+  }
 }
 </script>
 
 <style scoped>
-/*body {*/
-/*  margin: 0;*/
-/*}*/
+
 .wrapper {
-  /*width: 1440px;*/
   width: 100%;
   background: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(212, 20, 90, 0.7) 98.16%);
 }
