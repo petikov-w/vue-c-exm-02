@@ -2,12 +2,12 @@
   <div class="wrapper">
     <div class="header">
       <div class="t-area">
-        <img width="20" height="20" src="../assets/i-telefon.png">
+        <img width="20" height="20" src="../assets/i-telefon.png" alt="ico-telefon">
         <div class="telefon">{{ telefon_1 }}</div>
         <div class="telefon">{{ telefon_2 }}</div>
       </div>
       <div class="m-area">
-        <img width="15" height="25" src="../assets/i-mesto.png">
+        <img width="15" height="25" src="../assets/i-mesto.png" alt="ico-area">
         <div class="telefon">{{ city }}</div>
       </div>
     </div>
@@ -21,7 +21,7 @@ export default {
     return {
     telefon_1: "+7 909 428 2463",
     telefon_2: "+7 905 920 2069",
-    city: "Ростов-на-Дон"
+    city: "Ростов-на-Дону"
   }}
 }
 </script>
