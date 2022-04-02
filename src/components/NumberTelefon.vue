@@ -8,11 +8,6 @@
 export default {
   name: "NumberTelefon",
   props: {tel: String},
-  // data: function () {
-  //   return {
-  //     telefon: "+79094282463",
-  //   }
-  // },
   methods: {
     PhoneNumberFormat(number) {
       let temp_number;
@@ -54,7 +49,6 @@ export default {
   font-size: 15px;
   line-height: 10px;
   color: #FFFFFF;
-  /*padding-left: 13px;*/
   text-decoration: none;
 }
 </style>

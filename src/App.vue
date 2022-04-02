@@ -5,13 +5,16 @@
 <!--  </nav>-->
 <!--  <router-view/>-->
   <Header></Header>
+  <Hero></Hero>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Hero from './components/HeroSection.vue'
 export default {
     components: {
-      Header
+      Header,
+      Hero
     }
 }
 

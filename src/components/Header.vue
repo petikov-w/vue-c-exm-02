@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper-top">
     <div class="header">
       <div class="t-area">
         <img width="20" height="20" src="../assets/i-telefon.png" alt="ico-telefon">
@@ -8,9 +8,23 @@
       </div>
       <div class="m-area">
         <img width="15" height="25" src="../assets/i-mesto.png" alt="ico-area">
-        <div class="telefon">{{ city }}</div>
+        <div class="mesto">{{ city }}</div>
       </div>
     </div>
+  </div>
+  <div class="logo-nav">
+    <div class="logo">
+      <img src="../assets/logo-header.svg" alt="logo">
+      <span>evarugs</span>
+    </div>
+    <div class="nav-menu">
+      <ul>
+        <li><a href="#">отзывы</a></li>
+        <li><a href="#">что это?</a></li>
+        <li><a href="#">контакты</a></li>
+      </ul>
+    </div>
+
   </div>
 </template>
 
@@ -32,9 +46,56 @@ export default {
 
 <style scoped>
 
-.wrapper {
+.wrapper-top {
   width: 100%;
   background: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(212, 20, 90, 0.7) 98.16%);
+  margin-bottom: 45px;
+}
+
+.logo-nav {
+  width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.logo span {
+  font-family: 'Roboto', sans-serif;
+  /*font-style: normal;*/
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+  padding-left: 11px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.nav-menu {
+  width: 35%;
+}
+.nav-menu ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.nav-menu ul a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 21px;
+  color: #737373;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+.nav-menu ul a:hover {
+  padding-bottom: 5px;
+  border-bottom: 1.5px solid #4d4d4d;
 }
 
 .tels {
@@ -50,7 +111,7 @@ export default {
   justify-content: space-between;
 }
 
-.header .telefon {
+.header .mesto {
   font-family: 'Roboto', sans-serif;
   /*font-style: normal;*/
   font-weight: 500;
@@ -72,6 +133,8 @@ export default {
   margin-left: 175px;
 }
 
+/*Адаптивные стили*/
+/*----------------*/
 @media (min-width: 800px) and (max-width: 1200px) {
   .header {
     width: 80vw;
