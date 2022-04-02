@@ -3,9 +3,8 @@
     <div class="header">
       <div class="t-area">
         <img width="20" height="20" src="../assets/i-telefon.png" alt="ico-telefon">
-<!--        <div class="telefon">{{ telefon_1 }}</div>-->
-        <div class="telefon">{{ PhoneNumberFormat(telefon_1) }}</div>
-        <div class="telefon">{{ PhoneNumberFormat(telefon_2) }}</div>
+        <Telefon class="tels" :tel="79094282463"></Telefon>
+        <Telefon class="tels" :tel="79059202069"></Telefon>
       </div>
       <div class="m-area">
         <img width="15" height="25" src="../assets/i-mesto.png" alt="ico-area">
@@ -16,26 +15,18 @@
 </template>
 
 <script>
+import Telefon from '@/components/NumberTelefon';
 export default {
+  components: {
+    Telefon
+  },
   name: "Header",
   data: function () {
     return {
-      telefon_1: "+79094282463",
-      telefon_2: "+79059202069",
       city: "Ростов-на-Дону"
     }
   },
-  methods: {
-    PhoneNumberFormat(number) {
-      let temp_number, pref;
-      temp_number = `${number}`;
-      if (temp_number[0] == '8') { pref = temp_number.substr(0,1)}
-      if (temp_number[0] == '+') { pref = temp_number.substr(0,2);}
-      temp_number = temp_number.substr(-10);
-      return `${pref}  (${temp_number.substr(0,3)}) ${temp_number.substr(3,3)}
-              ${temp_number.substr(6,2)} ${temp_number.substr(8,2)}`;
-    }
-  }
+
 }
 </script>
 
@@ -44,6 +35,10 @@ export default {
 .wrapper {
   width: 100%;
   background: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(212, 20, 90, 0.7) 98.16%);
+}
+
+.tels {
+  margin-left: 15px;
 }
 
 .header {
@@ -63,6 +58,7 @@ export default {
   line-height: 10px;
   color: #FFFFFF;
   padding-left: 13px;
+  text-decoration: none;
 }
 
 .t-area {
