@@ -32,7 +32,7 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: 'Roboto', sans-serif;
   color: #000000;
@@ -53,20 +53,14 @@ body {
 }
 
 .title-eva {
-  font-weight: 400;
-  font-size: 50px;
-  line-height: 58px;
+  @include font (50px, 400, 58px);
   text-align: center;
   margin: 70px 0 100px 0;
-}
-
-.title-eva .colortext {
-  /*color: linear-gradient(95.2deg, #B90160 2.23%, #2E3192 99.51%);*/
-  background: linear-gradient(180deg, #B90160 2.23%, #2E3192 69.51%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #0B2349;
-  /*display: table;*/
+  .colortext {
+    background: linear-gradient(180deg, #B90160 2.23%, #2E3192 69.51%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 </style>

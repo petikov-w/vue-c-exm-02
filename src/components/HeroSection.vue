@@ -21,7 +21,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
     .hero {
       width: 1220px;
       margin: 0 auto;
@@ -34,84 +35,51 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-    }
-    .hero img {
-      position: absolute;
-      top: -75px;
-      right: 70px;
-    }
-    .hero .blik-1 {
-      position: absolute;
-      top: 90px;
-      left: 330px;
-      height: 45px;
-      width: 45px;
-    }
-
-    .hero .blik-2 {
-      position: absolute;
-      top: 76px;
-      left: 312px;
-      height: 23px;
-      width: 23px;
-    }
-
-    .hero .blik-3 {
-      position: absolute;
-      top: 485px;
-      left: 0;
-      height: 74px;
-      width: 74px;
-    }
-
-    .hero .blik-4 {
-      position: absolute;
-      top: 445px;
-      left: 45px;
-      height: 43px;
-      width: 43px;
-    }
-
-    .hero .blik-5 {
-      position: absolute;
-      top: 490px;
-      left: 75px;
-      height: 13px;
-      width: 13px;
+      img {
+        position: absolute;
+        top: -75px;
+        right: 70px;
+      }
+      .blik-1 {
+        @include blik(45px, 90px, 330px);
+      }
+      .blik-2 {
+        @include blik(23px, 76px, 312px);
+      }
+      .blik-3 {
+        @include blik(74px, 485px, 0);
+      }
+      .blik-4 {
+        @include blik(43px, 445px, 45px);
+      }
+      .blik-5 {
+        @include blik(13px, 490px, 75px);
+      }
     }
 
     .info-box {
       width: 1200px;
       margin: 0 auto;
       padding-top: 150px;
-    }
-    .info-box .title {
-      font-weight: 900;
-      font-size: 50px;
-      line-height: 59px;
-      max-width: 670px;
+      .title {
+        @include font (50px, 900, 59px);
+        max-width: 670px;
+      }
+      .subtitle {
+        @include font (24px, 300, 28px);
+        max-width: 670px;
+        margin: 20px 0;
+      }
+      button {
+        @include font (20px, 700, 23px, #ffffff);
+        letter-spacing: 1px;
+        padding: 15px 30px;
+        border-radius: 7px;
+        text-transform: uppercase;
+        outline: none;
+        border: 0;
+        background: linear-gradient(95.2deg, #B90160 2.23%, #2E3192 99.51%);
+      }
     }
 
-    .info-box .subtitle {
-      font-weight: 300;
-      font-size: 24px;
-      line-height: 28px;
-      max-width: 670px;
-      margin: 20px 0;
-    }
-
-    .info-box button {
-      padding: 15px 30px;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 23px;
-      border-radius: 7px;
-      text-transform: uppercase;
-      outline: none;
-      border: 0;
-      background: linear-gradient(95.2deg, #B90160 2.23%, #2E3192 99.51%);
-      color: #FFFFFF;
-      letter-spacing: 1px;
-      /*width: 20%;*/
-    }
 </style>
