@@ -1,7 +1,7 @@
 <template>
   <div class="logo-nav">
     <div class="logo">
-      <img src="../assets/logo-header.svg" alt="logo">
+      <img src="../assets/images/logo-header.svg" alt="logo">
       <span>evarugs</span>
     </div>
     <div class="nav-menu">
@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .logo-nav {
   display: flex;
   justify-content: space-between;
@@ -37,7 +37,8 @@ export default {
   font-weight: 900;
   font-size: 36px;
   line-height: 42px;
-  color: #000000;
+  /*color: #000000;*/
+  color: $main_color;
   padding-left: 11px;
   text-transform: uppercase;
   font-style: italic;

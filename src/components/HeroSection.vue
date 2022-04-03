@@ -1,12 +1,12 @@
 <template>
 
     <div class="hero">
-      <img src="../assets/kovriks-hero.png" alt="background-hero">
-      <img class="blik-1" src="../assets/blik.png" alt="blik">
-      <img class="blik-2" src="../assets/blik.png" alt="blik">
-      <img class="blik-3" src="../assets/blik.png" alt="blik">
-      <img class="blik-4" src="../assets/blik.png" alt="blik">
-      <img class="blik-5" src="../assets/blik.png" alt="blik">
+      <img src="../assets/images/kovriks-hero.png" alt="background-hero">
+      <img class="blik-1" src="../assets/images/blik.png" alt="blik">
+      <img class="blik-2" src="../assets/images/blik.png" alt="blik">
+      <img class="blik-3" src="../assets/images/blik.png" alt="blik">
+      <img class="blik-4" src="../assets/images/blik.png" alt="blik">
+      <img class="blik-5" src="../assets/images/blik.png" alt="blik">
       <div class="info-box">
           <div class="title">Инновационные коврики для автомобиля</div>
           <div class="subtitle">в вашем городе</div>
@@ -25,7 +25,7 @@ export default {
     .hero {
       width: 1220px;
       margin: 0 auto;
-      background-image: url(../assets/background-hero.png);
+      background-image: url(../assets/images/background-hero.png);
       background-repeat: no-repeat;
       background-position-x: 100%;
       height: 522px;

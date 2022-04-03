@@ -2,12 +2,12 @@
 
     <div class="header">
       <div class="t-area">
-        <img width="20" height="20" src="../assets/i-telefon.png" alt="ico-telefon">
+        <img width="20" height="20" src="../assets/images/i-telefon.png" alt="ico-telefon">
         <Telefon class="tels" :tel="79094282463"></Telefon>
         <Telefon class="tels" :tel="79059202069"></Telefon>
       </div>
       <div class="m-area">
-        <img width="15" height="25" src="../assets/i-mesto.png" alt="ico-area">
+        <img width="15" height="25" src="../assets/images/i-mesto.png" alt="ico-area">
         <div class="mesto">{{ city }}</div>
       </div>
     </div>
