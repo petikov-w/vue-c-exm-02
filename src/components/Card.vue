@@ -1,21 +1,30 @@
 <template>
- <div class="card">
-   <img src="../assets/images/material.jpg" alt="{{ title }}">
-   <img src="{{ img_src }}" alt="{{ title }}">
-<!--   <div class="title">материал</div>-->
-<!--   <div class="discription">Коврики EVA всесезонные и отличаются уникальной поверхностью материала с-->
-<!--     ячейками ромбовидной формы. Из-за чего вода не проливается при изъятии ковра и не плещется при езде.-->
-<!--     Коврики воду не пропускают.</div>-->
-<!-- </div>-->
-   <div class="title">{{ title }}</div>
-   <div class="description">{{description}}</div>
+   <div class="cards-box" v-for="card in card_data" :key="card.id" :card_data="card">
+     <div class="card">
+       <img :src="card.img_src" :alt="card.img_alt">
+       <div class="title">{{ card.title }}</div>
+       <div class="description">{{ card.description }}</div>
+   </div>
  </div>
 </template>
 
 <script>
 export default {
   name: "Card",
-  props: {img_src: String, img_alt:string, title: String, description: String}
+  props: {
+    card_data: {
+      type: Array
+    }
+  },
+  computed: {
+    imgUrl() {
+      return require(`${this.result.img}`)
+    },
+    // imgAlt() {
+    //   return `Комплект ${this.result.title}`)
+    // }
+  }
+
 }
 </script>
 
@@ -44,5 +53,9 @@ export default {
         margin: 0 0 30px 22px;
         max-width: 290px;
       }
+    }
+    .cards-box {
+      display: flex;
+      justify-content: space-between;
     }
 </style>

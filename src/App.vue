@@ -13,12 +13,7 @@
     <LogoNav></LogoNav>
     <Hero></Hero>
     <div class="title-eva">Что такое <span class="colortext">EVA</span> коврики?</div>
-    <div class="cards-box">
-      <Card :title=title1 :description=description></Card>
-      <Card :title="отличия"></Card>
-      <Card :title="расцветка"></Card>
-    </div>
-
+    <Card :card_data="cards"></Card>
   </div>
 
 </template>
@@ -38,10 +33,29 @@ export default {
     },
   data: function () {
     return {
-      title1: "материал",
-      description: "Коврики EVA всесезонные и отличаются уникальной поверхностью материала с\n" +
-          "   ячейками ромбовидной формы. Из-за чего вода не проливается при изъятии ковра и не плещется при езде.\n" +
-          "   Коврики воду не пропускают."
+      cards: [
+        {
+         id: 1,
+         img_src: require('./assets/images/material.jpg'),
+         // img_src: 'material.jpg',
+         img_alt: 'material',
+         title: "материал",
+         description: "Коврики EVA всесезонные и отличаются уникальной поверхностью материала с " +
+             "ячейками ромбовидной формы. Из-за чего вода не проливается при изъятии ковра и не плещется " +
+             "при езде. Коврики воду не пропускают."
+        },
+        {
+          id: 2,
+          img_src: require('./assets/images/otlichie.jpg'),
+          // img_src: 'otlichie.jpg',
+          img_alt: 'otlichie',
+          title: "отличия",
+          description: "Резиновые коврики загибаются и лезут на педали. EVA коврики такого не допустят! " +
+              "Специальные липучки держат его в одном положении. При желании, для водителя устанавливается подпятник " +
+              "из рельефного алюминия."
+        }
+        // {}
+      ]
     }
   }
 }
@@ -78,9 +92,10 @@ body {
   }
 }
 
-.cards-box {
-  display: flex;
-  justify-content: space-between;
-}
+//.cards-box {
+//  display: flex;
+//  justify-content: space-between;
+//}
 
 </style>
+
