@@ -23,3 +23,8 @@ $main_color: #000000;
   height: $size;
   width: $size;
 }
+
+@mixin wrapper($width) {
+  width: $width;
+  margin: 0 auto;
+}

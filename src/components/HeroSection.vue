@@ -24,8 +24,7 @@ export default {
 <style lang="scss" scoped>
 
     .hero {
-      width: 1220px;
-      margin: 0 auto;
+      @include wrapper(1220px);
       background-image: url(../assets/images/background-hero.png);
       background-repeat: no-repeat;
       background-position-x: 100%;
@@ -58,8 +57,7 @@ export default {
     }
 
     .info-box {
-      width: 1200px;
-      margin: 0 auto;
+      @include wrapper(1200px);
       padding-top: 150px;
       .title {
         @include font (50px, 900, 59px);

@@ -42,13 +42,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .telefon {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 10px;
-  color: #FFFFFF;
+  @include font(15px, 500, 20px, #FFFFFF);
   text-decoration: none;
 }
 </style>

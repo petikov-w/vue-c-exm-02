@@ -32,36 +32,30 @@ export default {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-.logo span {
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 42px;
-  /*color: #000000;*/
-  color: $main_color;
-  padding-left: 11px;
-  text-transform: uppercase;
-  font-style: italic;
+  span {
+    @include font(36px, 900, 42px);
+    font-style: italic;
+    text-transform: uppercase;
+    padding-left: 11px;
+  }
 }
 
 .nav-menu {
   width: 35%;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  ul a {
+    @include font(20px, 300, 21px, #737373);
+    text-transform: lowercase;
+    text-decoration: none;
+    &:hover {
+      padding-bottom: 5px;
+      border-bottom: 1.5px solid #4d4d4d;
+    }
+  }
 }
-.nav-menu ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-.nav-menu ul a {
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 21px;
-  color: #737373;
-  text-transform: lowercase;
-  text-decoration: none;
-}
-.nav-menu ul a:hover {
-  padding-bottom: 5px;
-  border-bottom: 1.5px solid #4d4d4d;
-}
+
 </style>

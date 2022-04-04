@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .tels {
   margin-left: 15px;
@@ -41,26 +41,20 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.header .mesto {
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 10px;
-  color: #FFFFFF;
-  padding-left: 13px;
-  text-decoration: none;
-}
-
-.t-area {
-  display: flex;
-  align-items: center;
-}
-
-.m-area {
-  display: flex;
-  align-items: center;
-  margin-left: 175px;
+  .t-area {
+    display: flex;
+    align-items: center;
+  }
+  .m-area {
+    display: flex;
+    align-items: center;
+    margin-left: 175px;
+    .mesto {
+      @include font (15px, 500, 20px, #FFFFFF);
+      padding-left: 13px;
+      text-decoration: none;
+    }
+  }
 }
 
 /*Адаптивные стили*/

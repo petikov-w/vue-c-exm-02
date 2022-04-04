@@ -13,6 +13,12 @@
     <LogoNav></LogoNav>
     <Hero></Hero>
     <div class="title-eva">Что такое <span class="colortext">EVA</span> коврики?</div>
+    <div class="cards-box">
+      <Card :title=title1 :description=description></Card>
+      <Card :title="отличия"></Card>
+      <Card :title="расцветка"></Card>
+    </div>
+
   </div>
 
 </template>
@@ -21,13 +27,23 @@
 import Header from './components/Header.vue'
 import Hero from './components/HeroSection.vue'
 import LogoNav from './components/LogoNavSection.vue'
+import Card from './components/Card.vue'
 
 export default {
     components: {
       Header,
       Hero,
-      LogoNav
+      LogoNav,
+      Card
+    },
+  data: function () {
+    return {
+      title1: "материал",
+      description: "Коврики EVA всесезонные и отличаются уникальной поверхностью материала с\n" +
+          "   ячейками ромбовидной формы. Из-за чего вода не проливается при изъятии ковра и не плещется при езде.\n" +
+          "   Коврики воду не пропускают."
     }
+  }
 }
 
 </script>
@@ -35,7 +51,7 @@ export default {
 <style lang="scss">
 #app {
   font-family: 'Roboto', sans-serif;
-  color: #000000;
+  color: $main_color;
 }
 body {
   margin: 0;
@@ -48,8 +64,7 @@ body {
 }
 
 .wrapper {
-  width: 1200px;
-  margin: 0 auto;
+  @include wrapper(1200px);
 }
 
 .title-eva {
@@ -61,6 +76,11 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+
+.cards-box {
+  display: flex;
+  justify-content: space-between;
 }
 
 </style>
