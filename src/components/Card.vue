@@ -15,16 +15,7 @@ export default {
     card_data: {
       type: Array
     }
-  },
-  computed: {
-    imgUrl() {
-      return require(`${this.result.img}`)
-    },
-    // imgAlt() {
-    //   return `Комплект ${this.result.title}`)
-    // }
   }
-
 }
 </script>
 
