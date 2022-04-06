@@ -27,7 +27,7 @@ export default {
   name: "Header",
   data: function () {
     return {
-      city: "Ростов-на-Дону",
+      city: "Ростов-на-Дону ",
       text: "посетите нашу страницу"
     }
   }
