@@ -10,6 +10,10 @@
         <img width="15" height="25" src="../assets/images/i-mesto.png" alt="ico-area">
         <div class="mesto">{{ city }}</div>
       </div>
+      <div class="s-area">
+        <img width="30" height="30" src="../assets/images/instagram-icon-white.png" alt="ico-social">
+        <div class="social-text" >{{ text }}</div>
+      </div>
     </div>
 
 </template>
@@ -23,10 +27,10 @@ export default {
   name: "Header",
   data: function () {
     return {
-      city: "Ростов-на-Дону"
+      city: "Ростов-на-Дону",
+      text: "посетите нашу страницу"
     }
-  },
-
+  }
 }
 </script>
 
@@ -57,13 +61,28 @@ export default {
   .m-area {
     display: flex;
     align-items: center;
-    margin-left: 175px;
+    //margin-left: 175px;
     .mesto {
       @include font (15px, 500, 20px, #FFFFFF);
       padding-left: 13px;
       text-decoration: none;
     }
   }
+  .s-area {
+    display: flex;
+    align-items: center;
+    //margin-left: 120px;
+    .social-text {
+      font-size: 14px;
+      color: #FFFFFF;
+      max-width: 97px;
+    }
+    img {
+      margin-right: 10px;
+      //margin-left: 120px;
+    }
+  }
+
 }
 
 /*Адаптивные стили*/
