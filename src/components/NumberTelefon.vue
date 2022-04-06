@@ -1,5 +1,6 @@
 <template>
     <div>
+<!--      <a :href="`tel:${PhoneNumberLink(tel)}`" class="telefon" :style="{ color: font_color }">{{ PhoneNumberFormat(tel) }}</a>-->
       <a :href="`tel:${PhoneNumberLink(tel)}`" class="telefon">{{ PhoneNumberFormat(tel) }}</a>
     </div>
 </template>
@@ -44,7 +45,8 @@ export default {
 
 <style lang="scss" scoped>
 .telefon {
-  @include font(15px, 500, 20px, #FFFFFF);
+  @include font(15px, 500, 20px);
+  //color: v-bind(font_color);
   text-decoration: none;
 }
 </style>

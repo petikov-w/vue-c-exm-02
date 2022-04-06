@@ -3,7 +3,7 @@
     <div class="header">
       <div class="t-area">
         <img width="20" height="20" src="../assets/images/i-telefon.png" alt="ico-telefon">
-        <Telefon class="tels" :tel="79094282463"></Telefon>
+        <Telefon class="tels fnt" :tel="79094282463"></Telefon>
         <Telefon class="tels" :tel="79059202069"></Telefon>
       </div>
       <div class="m-area">
@@ -32,8 +32,17 @@ export default {
 
 <style lang="scss" scoped>
 
-.tels {
+ .tels {
   margin-left: 15px;
+}
+
+:deep(.telefon) {
+  color: #FFFFFF;
+}
+
+
+:deep(fnt) {
+  color: #FFFFFF;
 }
 
 .header {

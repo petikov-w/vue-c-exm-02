@@ -1,7 +1,9 @@
 <template>
-<!--  <div class="cards-box" v-for="card in card_data" :key="card.id" :card_data="cards">-->
   <div class="cards-box">
-    <CardListItem v-for="card in cards" :key="card.id" :card_data="card"></CardListItem>
+    <img class="blik-1" src="../assets/images/blik-eva.png" alt="blik">
+    <img class="blik-2" src="../assets/images/blik-eva-m.png" alt="blik">
+    <img class="blik-3" src="../assets/images/blik-eva-s.png" alt="blik">
+    <CardListItem class="west" v-for="card in cards" :key="card.id" :card_data="card"></CardListItem>
   </div>
 </template>
 
@@ -52,6 +54,30 @@ export default {
 .cards-box {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
+  position: relative;
+  .blik-1 {
+    position: absolute;
+    top: -6px;
+    left: -140px;
+  }
+  .blik-2 {
+    position: absolute;
+    top: 210px;
+    left: 337px;
+  }
+  .blik-3 {
+    position: absolute;
+    top: 460px;
+    left: 255px;
+  }
+
+  .west {
+     background-color: #ffffff;
+     position: relative;
+  }
 }
+
+
+
 </style>
