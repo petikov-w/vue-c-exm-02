@@ -1,46 +1,49 @@
 <template>
 <div class="testimonials-section">
-  <TestimonialsListItem class="west" v-for="testimonial in testimonials" :key="testimonial.id" :tm_data="testimonial">
-  </TestimonialsListItem>
+<!--  <carousel :items="3" :nav="false" :margin="20" :autoplay="true" :dots="false">-->
+    <TestimonialsListItem class="west" v-for="testimonial in testimonials" :key="testimonial.id" :tm_data="testimonial">
+    </TestimonialsListItem>
+<!--  </carousel>-->
+
 </div>
 </template>
 
 <script>
 import TestimonialsListItem from '../components/TestimonialsListItem';
+import carousel from 'vue-owl-carousel'
+
 export default {
   name: "TestimonialsList",
   components: {
-    TestimonialsListItem
+    TestimonialsListItem,
+    carousel
   },
   data: function () {
     return {
       testimonials: [
         {
           id: 1,
+          img_src: require('../assets/images/otz1.png'),
+          img_alt: "otziv",
+          otziv: "Коврики супер!!! Качество на высшем уровне!!! Удачи и побольше заказов вам!!! " +
+                 "Большое спасибо!",
+          author: "Константин В."
+        },
+        {
+          id: 2,
           img_src: require('../assets/images/otz2.jpg'),
           img_alt: "otziv",
           otziv: "Покупала у ребят коврики для Хундай солярис в подарок молодому человеку. Все очень понравилось. " +
                  "Буду советовать только вас.",
           author: "Вера К."
         },
-        // {
-        //   id: 2,
-        //   img_src: require('../assets/images/otlichie.jpg'),
-        //   img_alt: "otlichie",
-        //   title: "отличия",
-        //   description: "Резиновые коврики загибаются и лезут на педали. EVA коврики такого не допустят! " +
-        //       "Специальные липучки держат его в одном положении. При желании, для водителя устанавливается подпятник " +
-        //       "из рельефного алюминия."
-        // },
-        // {
-        //   id: 3,
-        //   img_src: require('../assets/images/rascvetka.jpg'),
-        //   img_alt: "rascvetka",
-        //   title: "расцветка",
-        //   description: "Автомобильные коврики EVA можно заказать и в индивидуальных размерах и в разных цветах, " +
-        //       "которые комбинируется на выбор покупателя с такими же цветами окантовочной полипропиленовой " +
-        //       "ременной ленты."
-        // }
+        {
+          id: 3,
+          img_src: require('../assets/images/otz3.jpg'),
+          img_alt: "otziv",
+          otziv: "Спасибо, все приехало, поставил. Результатом доволен, в машине супер! Заказывал на Ниссан.",
+          author: "Николай П."
+        }
       ]
     }
   }
