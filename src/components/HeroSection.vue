@@ -1,7 +1,7 @@
 <template>
 
     <div class="hero">
-      <img src="../assets/images/kovriks-hero.png" alt="background-hero">
+      <img class="kovrik" src="../assets/images/kovriks-hero.png" alt="background-hero">
       <img class="blik-1" src="../assets/images/blik.png" alt="blik">
       <img class="blik-2" src="../assets/images/blik.png" alt="blik">
       <img class="blik-3" src="../assets/images/blik.png" alt="blik">
@@ -79,5 +79,52 @@ export default {
         background: linear-gradient(95.2deg, #B90160 2.23%, #2E3192 99.51%);
       }
     }
+
+    /*Адаптивные стили*/
+    /*----------------*/
+    @media (min-width: 800px) and (max-width: 1200px) {
+
+    }
+
+    @media (min-width: 500px) and (max-width: 750px) {
+
+    }
+
+    @media (max-width: 500px) {
+        .hero {
+          background-position-x: 40%;
+          background-size: 140%;
+          max-width: 100vw;
+          height: 385px;
+          margin-top: 30px;
+          margin-left: 0;
+        }
+        .hero .kovrik {
+          display: none;
+        }
+        .hero .info-box {
+          padding-top: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 300px;
+        }
+
+        .hero .info-box button {
+          @include font (10px, 700, 23px, #ffffff);
+          padding: 7px 20px;
+        }
+        .hero .info-box .title {
+            @include font (25px, 900, 25px);
+            max-width: 194px;
+            text-align: center;
+        }
+        .blik-1, .blik-2, .blik-3, .blik-4, .blik-5 {
+             display: none;
+        }
+
+    }
+
+
 
 </style>

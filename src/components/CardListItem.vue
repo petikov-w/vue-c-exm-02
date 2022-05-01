@@ -31,11 +31,13 @@ export default {
   img {
     height: 242px;
   }
+
   .title {
     @include font(36px, 700, 42px);
     margin: 20px 0 15px 22px;
     text-transform: uppercase;
   }
+
   .description {
     @include font(14px, 300, 17px, #767676);
     margin-left: 22px;
@@ -43,4 +45,13 @@ export default {
     max-width: 290px;
   }
 }
+@media (max-width: 500px) {
+  .card {
+    max-width: 80vw;
+  }
+  .card .description {
+    max-width: 240px;
+  }
+}
+
 </style>

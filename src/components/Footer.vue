@@ -14,7 +14,7 @@
               <Telefon class="tels" :tel="79059202069"></Telefon>
           </div>
           <div class="box">
-              <h4>О НАС</h4>
+              <h4>О НАС {{ screen_width }}</h4>
               <p>Индивидуальное изготовление EVA ковриков для вашего автомобиля<br><br>
                 Ростов-на-Дону</p>
           </div>
@@ -24,12 +24,11 @@
 </template>
 
 <script>
-import Telefon from '@/components/NumberTelefon';
+import Telefon from '@/components/UI/NumberTelefon';
 export default {
-  components: {
-    Telefon
-  },
-  name: "Footer"
+  components: { Telefon },
+  name: "Footer",
+  props: {screen_width: String},
 }
 </script>
 

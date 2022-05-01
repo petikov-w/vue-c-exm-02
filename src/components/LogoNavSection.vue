@@ -6,9 +6,9 @@
     </div>
     <div class="nav-menu">
       <ul>
-        <li><a href="#">отзывы</a></li>
-        <li><a href="#">что это?</a></li>
-        <li><a href="#">контакты</a></li>
+        <li><a href="#otziv">отзывы</a></li>
+        <li><a href="#whatisit">что это?</a></li>
+        <li><a href="#contacts">контакты</a></li>
       </ul>
     </div>
   </div>
@@ -56,6 +56,27 @@ export default {
       border-bottom: 1.5px solid #4d4d4d;
     }
   }
+}
+
+
+@media (max-width: 500px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .logo-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo span {
+    @include font(20px, 900, 21px);
+  }
+  .logo img {
+    height: 36px;
+    width: 60px;
+  }
+
 }
 
 </style>

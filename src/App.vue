@@ -6,18 +6,21 @@
 <!--  <router-view/>-->
   <div class="wrapper-top">
     <div class="wrapper">
-      <Header></Header>
+      <Header :screen_width="window.width"></Header>
     </div>
   </div>
   <div class="wrapper">
     <LogoNav></LogoNav>
     <Hero></Hero>
+    <a name="whatisit"></a>
     <div class="title-eva">Что такое <span class="colortext">EVA</span> коврики?</div>
     <CardList class="mrg2"></CardList>
   </div>
+  <a name="otziv"></a>
   <TestimonialsList class="mrg"></TestimonialsList>
   <div class="wrapper">
-    <Footer></Footer>
+    <a name="contacts"></a>
+    <Footer :screen_width="window.width"></Footer>
   </div>
 </template>
 
@@ -37,7 +40,24 @@ export default {
       CardList,
       TestimonialsList,
       Footer
+    },
+  data() {
+    return {
+      window: { width: 0 }
     }
+  },
+  created() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      this.window.width = window.innerWidth;
+    }
+  }
 }
 
 </script>
@@ -78,6 +98,19 @@ body {
 
 .mrg2 {
   margin-bottom: 200px!important;
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    @include wrapper(100vw);
+  }
+  .title-eva, .colortext {
+    font-size: 22px;
+    margin: 0;
+    margin-top: -60px;
+
+  }
+
 }
 
 </style>

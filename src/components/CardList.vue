@@ -78,6 +78,15 @@ export default {
   }
 }
 
+@media (max-width: 500px) {
+  .cards-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards-box img {
+    display: none;
+  }
+}
 
 
 </style>
