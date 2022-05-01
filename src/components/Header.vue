@@ -40,6 +40,9 @@ export default {
 
  .tels {
   margin-left: 15px;
+   @media screen and (max-width: 500px) {
+     margin-left: 0;
+   }
 }
 
 :deep(.telefon) {
@@ -56,24 +59,45 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    height: 17vh;
+    width: 100vw;
+    left: 0;
+  }
   .t-area {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 500px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 15px;
+    }
   }
   .m-area {
     display: flex;
     align-items: center;
-    //margin-left: 175px;
+    @media screen and (max-width: 500px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 15px 0;
+    }
     .mesto {
       @include font (15px, 500, 20px, #FFFFFF);
       padding-left: 13px;
       text-decoration: none;
+      @media screen and (max-width: 500px) {
+        padding-left: 0;
+        text-transform: uppercase;
+      }
     }
   }
   .s-area {
     display: flex;
     align-items: center;
-    //margin-left: 120px;
     .social-text {
       font-size: 14px;
       color: #FFFFFF;
@@ -81,7 +105,6 @@ export default {
     }
     img {
       margin-right: 10px;
-      //margin-left: 120px;
     }
   }
 
@@ -104,39 +127,6 @@ export default {
   .m-area {
     margin-left: 5vw;
   }
-}
-
-@media (max-width: 500px) {
-    .tels {
-      margin-left: 0;
-    }
-    .header {
-      display: flex;
-      flex-direction: column;
-      height: 17vh;
-      width: 100vw;
-      //margin: 0 auto;
-      left: 0;
-
-
-      .t-area {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 15px;
-      }
-
-      .m-area {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin: 15px 0;
-        .mesto {
-          padding-left: 0;
-          text-transform: uppercase;
-        }
-      }
-    }
 }
 
 </style>
