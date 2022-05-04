@@ -20,6 +20,8 @@
 
 <script>
 import Telefon from '@/components/UI/NumberTelefon';
+import {context} from "@/_const";
+
 export default {
   components: {
     Telefon
@@ -28,8 +30,8 @@ export default {
   props: {screen_width: Number},
   data: function () {
     return {
-      city: "Ростов-на-Дону ",
-      text: "посетите нашу страницу",
+      city: context.city,
+      text: context.welcome,
       res: this.screen_width
     }
   },
