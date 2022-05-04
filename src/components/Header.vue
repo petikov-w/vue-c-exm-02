@@ -59,6 +59,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (min-width: 768px) and (max-width: 1200px) {
+    //width: 100vw!important;
+    //left: 0;
+    //display: flex;
+    //justify-content: flex-start;
+  }
   @media screen and (max-width: 500px) {
     display: flex;
     flex-direction: column;
@@ -66,6 +72,7 @@ export default {
     width: 100vw;
     left: 0;
   }
+
   .t-area {
     display: flex;
     align-items: center;

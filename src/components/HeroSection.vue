@@ -38,6 +38,12 @@ export default {
         position: absolute;
         top: -75px;
         right: 70px;
+        @media (min-width: 768px) and (max-width: 1200px) {
+          width: 368px;
+          height: 473px;
+          left: 380px;
+          top: -100px;
+        }
       }
       .blik-1 {
         @include blik(45px, 90px, 330px);
@@ -59,9 +65,18 @@ export default {
     .info-box {
       @include wrapper(1200px);
       padding-top: 150px;
+      @media (min-width: 768px) and (max-width: 1200px) {
+        margin-left: 66px;
+        justify-content: flex-start;
+        padding-top: 10px;
+      }
       .title {
         @include font (50px, 900, 59px);
         max-width: 670px;
+        @media (min-width: 768px) and (max-width: 1200px) {
+          @include font (40px, 900, 40px);
+          max-width: 415px;
+        }
       }
       .subtitle {
         @include font (24px, 300, 28px);

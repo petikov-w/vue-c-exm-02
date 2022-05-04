@@ -4,7 +4,7 @@
       <img src="../assets/images/logo-header.svg" alt="logo">
       <span>evarugs</span>
     </div>
-    <div class="nav-menu">
+    <div v-if="res > 1200" class="nav-menu">
       <ul>
         <li><a href="#otziv">отзывы</a></li>
         <li><a href="#whatisit">что это?</a></li>
@@ -16,7 +16,13 @@
 
 <script>
 export default {
-  name: "LogoNavSection"
+  name: "LogoNavSection",
+  props: {screen_width: Number},
+  data: function () {
+    return {
+      res: this.screen_width
+    }
+  },
 }
 </script>
 
@@ -26,6 +32,10 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: #FFFFFF;
+  @media (min-width: 768px) and (max-width: 1200px) {
+    margin-left: 66px;
+    justify-content: flex-start;
+  }
 }
 
 .logo {
@@ -60,9 +70,9 @@ export default {
 
 
 @media (max-width: 500px) {
-  .nav-menu {
-    display: none;
-  }
+  //.nav-menu {
+  //  display: none;
+  //}
 
   .logo-nav {
     display: flex;

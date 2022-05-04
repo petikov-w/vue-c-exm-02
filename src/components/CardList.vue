@@ -56,6 +56,10 @@ export default {
   justify-content: space-between;
   margin-bottom: 150px;
   position: relative;
+  @media (min-width: 768px) and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
   .blik-1 {
     position: absolute;
     top: -6px;

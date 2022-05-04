@@ -28,6 +28,9 @@ export default {
   border-radius: 9px;
   box-shadow: 0px 1px 20px 6px rgba(236, 198, 217, 0.5);
   margin-bottom: 30px; // Потом убрать!
+  @media (min-width: 768px) and (max-width: 1200px) {
+    width: 80vw;
+  }
   img {
     height: 242px;
   }
@@ -43,6 +46,9 @@ export default {
     margin-left: 22px;
     margin: 0 0 30px 22px;
     max-width: 290px;
+    @media (min-width: 768px) and (max-width: 1200px) {
+      max-width: 90%;
+    }
   }
 }
 @media (max-width: 500px) {

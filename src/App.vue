@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="wrapper">
-    <LogoNav></LogoNav>
+    <LogoNav :screen_width="window.width"></LogoNav>
     <Hero></Hero>
     <a name="whatisit"></a>
     <div class="title-eva">Что такое <span class="colortext">EVA</span> коврики?</div>
@@ -79,6 +79,14 @@ body {
 
 .wrapper {
   @include wrapper(1200px);
+  @media (min-width: 768px) and (max-width: 1200px) {
+    //width: 100vw;
+    @include wrapper(100vw);
+    //left: 0;
+  }
+  @media (max-width: 500px) {
+      @include wrapper(100vw);
+    }
 }
 
 .title-eva {
@@ -102,7 +110,7 @@ body {
 
 @media (max-width: 500px) {
   .wrapper {
-    @include wrapper(100vw);
+    //@include wrapper(100vw);
   }
   .title-eva, .colortext {
     font-size: 22px;
