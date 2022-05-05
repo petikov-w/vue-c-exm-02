@@ -1,5 +1,4 @@
 <template>
-<!--  <div class="swiper-container">-->
     <swiper
         class="swiper"
         :modules="modules"
@@ -22,16 +21,7 @@
           </div>
         </div>
       </swiper-slide>
-
     </swiper>
-<!--  </div>-->
-
-
-<!--<div class="testimonials-section">-->
-<!--    <TestimonialsListItem class="west" v-for="testimonial in testimonials" :key="testimonial.id" :tm_data="testimonial">-->
-<!--    </TestimonialsListItem>-->
-<!--</div>-->
-
 </template>
 
 <script>
@@ -39,6 +29,7 @@ import TestimonialsListItem from '../components/TestimonialsListItem';
 import 'swiper/css';
 import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { listTestimonials } from "@/_testimonials_content";
 
 export default {
   name: "TestimonialsList",
@@ -60,69 +51,16 @@ export default {
       modules: [Autoplay],
     };
   },
-  // mounted:function(){
-  //   var mySwiper = new Swiper('.swiper-container', {
-  //     autoplay:true,
-  //     loop:true
-  //   })
-  // },
-  // options: {
-  //   autoplay: { delay: 3000 },
-  //   keyboard: { enabled: true },
-  //   loop: {
-  //     loopedSlides: 1
-  //   }
-  //   },
 
   data: function () {
     return {
-      testimonials: [
-        {
-          id: 1,
-          img_src: require('../assets/images/otz1.png'),
-          img_alt: "otziv",
-          otziv: "Коврики супер!!! Качество на высшем уровне!!! Удачи и побольше заказов вам!!! " +
-                 "Большое спасибо!",
-          author: "Константин В."
-        },
-        {
-          id: 2,
-          img_src: require('../assets/images/otz2.jpg'),
-          img_alt: "otziv",
-          otziv: "Покупала у ребят коврики для Хундай солярис в подарок молодому человеку. Все очень понравилось. " +
-                 "Буду советовать только вас.",
-          author: "Вера К."
-        },
-        {
-          id: 3,
-          img_src: require('../assets/images/otz3.jpg'),
-          img_alt: "otziv",
-          otziv: "Спасибо, все приехало, поставил. Результатом доволен, в машине супер! Заказывал на Ниссан.",
-          author: "Николай П."
-        }
-      ]
+      testimonials: listTestimonials
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-    //.testimonials-section {
-    //    height: 360px;
-    //    background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
-    //    display: flex;
-    //    align-items: center;
-    //    justify-content: center;
-    //}
-
-    //  .swiper {
-    //  @include swiper-wrapper();
-    //  background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
-    //
-    //  ::v-deep(.swiper-slide) {
-    //    @include swiper-slide();
-    //  }
-    //}
     .swiper {
       background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
     }

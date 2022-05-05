@@ -11,8 +11,9 @@
 
           <div class="box">
               <h4>КОНТАКТНЫЕ ТЕЛЕФОНЫ</h4>
-              <Telefon class="tels" :tel="79094282463"></Telefon>
-              <Telefon class="tels" :tel="79059202069"></Telefon>
+              <span v-for="(telefon, index) in telefons" :key="index">
+                <Telefon class="tels" :tel="telefon"></Telefon>
+              </span>
           </div>
           <div v-if="res < 500" class="box">
             <h4>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h4>
@@ -22,8 +23,7 @@
           </div>
           <div class="box">
               <h4>О НАС</h4>
-              <p>Индивидуальное изготовление EVA ковриков для вашего автомобиля<br><br>
-                Ростов-на-Дону</p>
+              <p>{{ text }}<br><br>{{ city }}</p>
           </div>
         </div>
     </div>
@@ -32,15 +32,18 @@
 
 <script>
 import Telefon from '@/components/UI/NumberTelefon';
+import {content, listTelefon} from "@/_headfoot_content";
+
 export default {
   components: { Telefon },
   name: "Footer",
   props: {screen_width: Number},
   data: function () {
     return {
-      city: "Ростов-на-Дону ",
-      text: "посетите нашу страницу",
-      res: this.screen_width
+      city: content.city,
+      text: content.footer_about_text,
+      res: this.screen_width,
+      telefons: listTelefon
     }
   },
 }

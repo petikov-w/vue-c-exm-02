@@ -3,8 +3,9 @@
     <div class="header">
       <div class="t-area">
         <img v-if="res > 500" width="20" height="20" src="../assets/images/i-telefon.png" alt="ico-telefon">
-        <Telefon class="tels fnt" :tel="79094282463"></Telefon>
-        <Telefon class="tels" :tel="79059202069"></Telefon>
+        <span v-for="(telefon, index) in telefons" :key="index">
+                <Telefon class="tels" :tel="telefon"></Telefon>
+        </span>
       </div>
       <div class="m-area">
         <img  v-if="res > 500" width="15" height="25" src="../assets/images/i-mesto.png" alt="ico-area">
@@ -20,7 +21,7 @@
 
 <script>
 import Telefon from '@/components/UI/NumberTelefon';
-import {context} from "@/_const";
+import {content, listTelefon} from "@/_headfoot_content";
 
 export default {
   components: {
@@ -30,8 +31,9 @@ export default {
   props: {screen_width: Number},
   data: function () {
     return {
-      city: context.city,
-      text: context.welcome,
+      city: content.city,
+      text: content.welcome,
+      telefons: listTelefon,
       res: this.screen_width
     }
   },
@@ -62,10 +64,6 @@ export default {
   align-items: center;
   justify-content: space-between;
   @media (min-width: 768px) and (max-width: 1200px) {
-    //width: 100vw!important;
-    //left: 0;
-    //display: flex;
-    //justify-content: flex-start;
   }
   @media screen and (max-width: 500px) {
     display: flex;

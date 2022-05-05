@@ -2,7 +2,7 @@
   <div class="logo-nav">
     <div class="logo">
       <img src="../assets/images/logo-header.svg" alt="logo">
-      <span>evarugs</span>
+      <span>{{ logo_text }}</span>
     </div>
     <div v-if="res > 1200" class="nav-menu">
       <ul>
@@ -15,12 +15,14 @@
 </template>
 
 <script>
+import {content} from "@/_headfoot_content";
 export default {
   name: "LogoNavSection",
   props: {screen_width: Number},
   data: function () {
     return {
-      res: this.screen_width
+      res: this.screen_width,
+      logo_text: content.logo_text
     }
   },
 }
